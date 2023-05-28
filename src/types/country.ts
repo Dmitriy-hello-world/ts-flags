@@ -1,4 +1,6 @@
+import { Axios } from 'axios'
 import { Region } from './regions'
+import * as API from 'config'
 
 type Currency = {
   code: string,
@@ -39,4 +41,11 @@ export type CountryInfo = {
   img: string,
   name: string,
   info: Info[],
+}
+
+export type Status = 'idle' | 'received' | 'rejected' | 'loading';
+
+export interface Extra {
+  client: Axios;
+  api:typeof API;
 }
