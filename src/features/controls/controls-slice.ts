@@ -1,6 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { Region } from 'types';
 
-const initialState = {
+interface controlsInitialState {
+  search: string;
+  region: Region | '';
+}
+
+const initialState: controlsInitialState = {
   search: '',
   region: '',
 };
